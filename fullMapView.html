@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CityVoice - Map View</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8FC285",
+              secondary: "#FFA500",
+              tertiary: "#28A745",
+              "background-light": "#F5F5F5",
+              "background-dark": "#101922",
+              "text-primary": "#333333",
+              "text-primary-dark": "#F0F0F0",
+              "text-secondary": "#F0F0F0",
+              "text-secondary-dark": "#CCCCCC",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="font-display">
+    <div
+      class="relative flex h-screen w-full max-w-[360px] flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden max-w-[390px] mx-auto"
+    >
+      <!-- Top App Bar -->
+      <div
+        class="flex shrink-0 items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="material-symbols-outlined text-primary text-3xl"
+            onclick="history.back()"
+            >keyboard_arrow_left</span
+          >
+          <h1
+            class="text-text-primary dark:text-text-primary-dark text-xl font-bold leading-tight tracking-tighter"
+          >
+            CityVoice
+          </h1>
+        </div>
+        <div class="flex items-center gap-2">
+          <a
+            href="notifications.html"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-text-primary dark:text-text-primary-dark"
+          >
+            <span class="material-symbols-outlined text-2xl"
+              >notifications</span
+            >
+          </a>
+          <a
+            href="settings.html"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-text-primary dark:text-text-primary-dark"
+          >
+            <span class="material-symbols-outlined text-2xl">settings</span>
+          </a>
+        </div>
+      </div>
+      <!-- Main Content Area with Map -->
+      <main class="flex-1 relative">
+        <!-- Interactive Map Background -->
+        <div
+          class="absolute inset-0 bg-cover bg-center"
+          data-alt="An interactive map of a city with several location pins."
+          data-location="City Center"
+          style="
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7LpArZhD7UczRHwiT8vC3hXNbOj85D3roWdNodXGsWko68D68quc0bUOitw0P8PpopJli0j0ksuRHiLojtblrj9VgUWpdStmi9nd8RL14kl6pl5ms_u56jiVnAceeStdtyWeaOBmeJXN8O6_MIZAzKAHpNMI8c6o5Xn788LXvEwn9fWmRhZRvry3OghmqIm3euGvJH5ycWltfy9VFG9WIl6F4N1DSjw4S9W0VhsGtIlEbMjvXI1oGOC8aY0syN9JXJhhB7EOrjS56');
+          "
+        ></div>
+        <!-- Map Markers -->
+        <!-- Marker 1: Pothole (triggers preview card) -->
+        <div
+          class="absolute top-[45%] left-[55%] -translate-x-1/2 -translate-y-1/2"
+        >
+          <button
+            class="flex items-center justify-center w-6 h-6 bg-secondary rounded-full shadow-lg ring-2 ring-white"
+          >
+            <span
+              class="material-symbols-outlined text-sm text-white !text-[16px]"
+              >build</span
+            >
+          </button>
+        </div>
+        <!-- Marker 2: Other issue -->
+        <div
+          class="absolute top-[30%] left-[30%] -translate-x-1/2 -translate-y-1/2"
+        >
+          <button
+            class="flex items-center justify-center w-6 h-6 bg-secondary rounded-full shadow-lg ring-2 ring-white"
+          >
+            <span
+              class="material-symbols-outlined text-sm text-white !text-[16px]"
+              >lightbulb</span
+            >
+          </button>
+        </div>
+        <!-- Marker 3: Another issue -->
+        <div
+          class="absolute top-[65%] left-[70%] -translate-x-1/2 -translate-y-1/2"
+        >
+          <button
+            class="flex items-center justify-center w-6 h-6 bg-secondary rounded-full shadow-lg ring-2 ring-white"
+          >
+            <span
+              class="material-symbols-outlined text-sm text-white !text-[16px]"
+              >delete</span
+            >
+          </button>
+        </div>
+        <!-- Report Preview Card (Modal/Popup) -->
+        <div
+          class="absolute bottom-4 left-4 right-4 z-10 p-4 bg-background-light rounded-xl shadow-lg flex flex-col gap-3"
+        >
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-base font-semibold text-text-primary">
+                Pothole on Main Street
+              </h3>
+              <p class="text-sm text-text-secondary">Road Maintenance</p>
+            </div>
+            <span
+              class="inline-flex items-center rounded-full bg-primary px-2.5 py-0.5 text-xs font-medium text-black"
+              >In Progress</span
+            >
+          </div>
+          <button
+            class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 bg-primary text-background-light text-sm font-medium leading-normal tracking-wide"
+          >
+            <a href="reportDetails.html"> View Details </a>
+          </button>
+        </div>
+      </main>
+      <!-- Bottom Navigation Bar -->
+      <div
+        class="flex shrink-0 gap-2 border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark px-4 pb-3 pt-2"
+      >
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-primary"
+          href="#"
+        >
+          <span
+            class="material-symbols-outlined !font-['Material_Symbols_Outlined'] fill-1 !text-2xl"
+            >home</span
+          >
+          <p class="text-xs font-medium leading-normal">Home</p>
+        </a>
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
+          href="report.html"
+        >
+          <span class="material-symbols-outlined !text-2xl">add_circle</span>
+          <p class="text-xs font-normal leading-normal">Add Report</p>
+        </a>
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
+          href="profile.html"
+        >
+          <span class="material-symbols-outlined !text-2xl">person</span>
+          <p class="text-xs font-normal leading-normal">Profile</p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

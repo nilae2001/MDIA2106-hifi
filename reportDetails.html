@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CityVoice Report Details</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8FC285",
+              secondary: "#FFA500",
+              tertiary: "#28A745",
+              "background-light": "#F5F5F5",
+              "background-dark": "#101922",
+              "text-primary": "#333333",
+              "text-primary-dark": "#F0F0F0",
+              "text-secondary": "#F0F0F0",
+              "text-secondary-dark": "#CCCCCC",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="font-display">
+    <div
+      class="relative flex min-h-screen w-full max-w-[390px] flex-col group/design-root overflow-x-hidden mx-auto"
+    >
+      <!-- Top App Bar -->
+      <div
+        class="flex shrink-0 items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="material-symbols-outlined text-primary text-3xl"
+            onclick="history.back()"
+            >keyboard_arrow_left</span
+          >
+          <h1
+            class="text-text-primary dark:text-text-primary-dark text-xl font-bold leading-tight tracking-tighter"
+          >
+            CityVoice
+          </h1>
+        </div>
+        <div class="flex items-center gap-2">
+          <a
+            href="notifications.html"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-text-primary dark:text-text-primary-dark"
+          >
+            <span class="material-symbols-outlined text-2xl"
+              >notifications</span
+            >
+          </a>
+          <a
+            href="settings.html"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-text-primary dark:text-text-primary-dark"
+          >
+            <span class="material-symbols-outlined text-2xl">settings</span>
+          </a>
+        </div>
+      </div>
+      <!-- Main Content -->
+      <main class="flex-1 overflow-y-auto p-4 pb-5 bg-background-light">
+        <div
+          class="space-y-4 rounded-lg bg-card-light dark:bg-card-dark p-4 shadow-sm"
+        >
+          <div>
+            <h3
+              class="text-base font-bold text-text-primary-light dark:text-text-primary-dark mb-4"
+            >
+              Report Progress
+            </h3>
+            <div class="w-full">
+              <div
+                class="relative mb-2 h-4 w-full rounded-full bg-background-light dark:bg-text-secondary-light"
+              >
+                <div class="h-4 w-2/3 rounded-full bg-tertiary"></div>
+              </div>
+              <div
+                class="flex items-center justify-between text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark"
+              >
+                <span class="font-semibold text-accent dark:text-accent"
+                  >Reported</span
+                >
+                <span class="font-semibold text-accent dark:text-accent"
+                  >→</span
+                >
+                <span class="font-semibold text-accent dark:text-accent"
+                  >Approved</span
+                >
+                <span class="font-semibold text-accent dark:text-accent"
+                  >→</span
+                >
+                <span class="font-semibold text-accent dark:text-accent"
+                  >Working</span
+                >
+                <span>→</span>
+                <span class="font-semibold text-accent dark:text-accent"
+                  >Completed</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h1
+              class="text-text-primary-light dark:text-text-primary-dark tracking-tight text-2xl font-bold leading-tight pt-3"
+            >
+              Large Pothole on Main Street
+            </h1>
+          </div>
+          <!-- BodyText -->
+          <p
+            class="text-text-secondary-light dark:text-text-secondary-dark text-base font-normal leading-relaxed"
+          >
+            A detailed paragraph explaining the issue of the large pothole on
+            Main Street, which has been causing problems for local traffic and
+            cyclists. The issue was reported three days ago. The road surface is
+            significantly damaged, posing a hazard to vehicles.
+          </p>
+          <!-- Media Gallery -->
+          <div class="space-y-2">
+            <h3
+              class="text-base font-bold text-text-primary-light dark:text-text-primary-dark"
+            >
+              Photos &amp; Videos
+            </h3>
+            <div
+              class="flex snap-x snap-mandatory space-x-3 overflow-x-auto pb-2"
+            >
+              <div
+                class="h-40 w-full max-w-[200px] flex-shrink-0 snap-center overflow-hidden rounded-lg bg-slate-200"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  data-alt="Close-up photo of a large pothole in an asphalt road."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQq-9JOziMu9uGMp93M5G_dr6DMeH4n3oVHTCsb456noIACD8iKAz26jWxvzMZ40abLgYZi13nusodYq_ULk_tvNAgIddScfZDU4779kVtIsAfy-iN06XRsIoUii0ippqaKJJX9XmZKrI1BkIus4uxCg5eqOaGb8yWS2W7GrKgv9icudqm2hZdH7q3yVsGaiysEJAbQ3t8a2n1x7mHou2wip7i4qiommdc0dDtLwu8RxXd0spMvXTcdEm1CrBXz5yryuN3FYaHeDEU"
+                />
+              </div>
+              <div
+                class="h-40 w-full max-w-[200px] flex-shrink-0 snap-center overflow-hidden rounded-lg bg-slate-200"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  data-alt="Wider angle shot of the pothole showing its context on the street."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmANahh6VVdZ3V_fKktZWcUmfK-PN0hG7pEtOI7COJjhVnkYmPyWKc_aEplyGnMiYPdJS3QAoy7RCe7SKzcRQfPdktbTTt7NG5F1etAdsjC2D_32aDYPS4koKbcRmq74FAqz2fQv-al3VySb_fQ1xTW7WMmIO1mBttoYfITi8zfK952pR0vwx6sgFEuLObJ4-7Pu-WHfQVjL5JWhtHYZUNpGsbTjh04jycmtkpMJkAeb7yiLjlmalM6xRnNAbxTVD1JRtWsUx7fWa_"
+                />
+              </div>
+              <div
+                class="h-40 w-full max-w-[200px] flex-shrink-0 snap-center overflow-hidden rounded-lg bg-slate-200"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  data-alt="A car driving near the pothole location."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZH6CrKbyV0PIqvQBvWof-r0jyEHVrJWOUjgR_JQngM-2U4021W1A99SmS1bwkRq9HkeKVWM8b-Gf8-4xfo1mHzZ56KpIc55WOn7Dhtu8ygg_PGbL9NLYg9Y-GgJKBqOXAZNnNn-s5mfgdyYViw4B154vAMEgiuBlq6g43SFcO7QM7o_R3yyNz0V_d4-Lni9qicK66IwwztwHj2lKByiwmElBbN7ZMPBCmehNDt9uhAuCIv0aWNRmFtil-fzX9Wl3OFm4KqB2FGYv1"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Location Section -->
+          <div class="space-y-2">
+            <h3
+              class="text-base font-bold text-text-primary-light dark:text-text-primary-dark"
+            >
+              Location
+            </h3>
+            <div class="w-full overflow-hidden rounded-lg">
+              <img
+                class="h-48 w-full object-cover"
+                data-alt="Map view showing a pin on Main Street."
+                data-location="Anytown, USA"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJpwxfEnGuj0lLVQoMm_ErEcULh8pbDa8lhhJqd-xxd7kdCiyCzdidAJxL3niBDe7Add-VtPOkCD5p_ZgqfNoVrTI6fzjyTzGJLqG5pGnno_rrMxtGmsfZAsgMSZIKmI5qb3IQi4ocjoAw2r5g8EwVlfR2NYoru51Rlwxlqp_uOoBq1c0cD296gNmhJQBm8Rk1EPMGVOjGW7pyd1frqaRSGRcLulfcvc_vX6BG-1zbrNm_vXIr1HeKtxzvIK6s26e_vGuaBabQQ4AC"
+              />
+            </div>
+            <p
+              class="text-sm text-text-secondary-light dark:text-text-secondary-dark"
+            >
+              123 Main Street, Anytown, USA
+            </p>
+          </div>
+          <!-- Action Bar -->
+          <div
+            class="flex items-center justify-around border-t border-background-light dark:border-text-secondary-light pt-3"
+          >
+            <button
+              class="flex flex-col items-center gap-1.5 text-text-secondary-light dark:text-text-secondary-dark hover:text-accent dark:hover:text-accent"
+            >
+              <span class="material-symbols-outlined text-2xl">thumb_up</span>
+              <span class="text-xs font-semibold">128</span>
+            </button>
+            <a
+              href="comments.html"
+              class="flex flex-col items-center gap-1.5 text-text-secondary-light dark:text-text-secondary-dark hover:text-accent dark:hover:text-accent"
+            >
+              <span class="material-symbols-outlined text-2xl"
+                >chat_bubble</span
+              >
+              <span class="text-xs font-semibold">16</span>
+            </a>
+            <button
+              class="flex flex-col items-center gap-1.5 text-text-secondary-light dark:text-text-secondary-dark hover:text-accent dark:hover:text-accent"
+            >
+              <span class="material-symbols-outlined text-2xl">share</span>
+              <span class="text-xs font-semibold">Share</span>
+            </button>
+          </div>
+        </div>
+      </main>
+      <!-- Bottom Navigation Bar -->
+      <div
+        class="flex shrink-0 gap-2 border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark px-4 pb-3 pt-2"
+      >
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-primary"
+          href="home.html"
+        >
+          <span
+            class="material-symbols-outlined !font-['Material_Symbols_Outlined'] fill-1 !text-2xl"
+            >home</span
+          >
+          <p class="text-xs font-medium leading-normal">Home</p>
+        </a>
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
+          href="report.html"
+        >
+          <span class="material-symbols-outlined !text-2xl">add_circle</span>
+          <p class="text-xs font-normal leading-normal">Add Report</p>
+        </a>
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
+          href="profile.html"
+        >
+          <span class="material-symbols-outlined !text-2xl">person</span>
+          <p class="text-xs font-normal leading-normal">Profile</p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

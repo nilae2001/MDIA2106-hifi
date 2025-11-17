@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CityVoice - Report Comments</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8FC285",
+              secondary: "#FFA500",
+              tertiary: "#28A745",
+              "background-light": "#F5F5F5",
+              "background-dark": "#101922",
+              "text-primary": "#333333",
+              "text-primary-dark": "#F0F0F0",
+              "text-secondary": "#F0F0F0",
+              "text-secondary-dark": "#CCCCCC",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="font-display">
+    <div
+      class="relative flex h-screen w-full max-w-[360px] flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden max-w-[390px] mx-auto"
+    >
+      <!-- Top App Bar -->
+      <div
+        class="flex shrink-0 items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="material-symbols-outlined text-primary text-3xl"
+            onclick="history.back()"
+            >keyboard_arrow_left</span
+          >
+          <h1
+            class="text-text-primary dark:text-text-primary-dark text-xl font-bold leading-tight tracking-tighter"
+          >
+            CityVoice
+          </h1>
+        </div>
+        <div class="flex items-center gap-2">
+          <a
+            href="notifications.html"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-text-primary dark:text-text-primary-dark"
+          >
+            <span class="material-symbols-outlined text-2xl"
+              >notifications</span
+            >
+          </a>
+          <a
+            href="settings.html"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-text-primary dark:text-text-primary-dark"
+          >
+            <span class="material-symbols-outlined text-2xl">settings</span>
+          </a>
+        </div>
+      </div>
+      <!-- Main Content - Comments -->
+      <main class="flex-1 overflow-y-auto bg-background-light px-4 pt-4">
+        <!-- Comment 1 -->
+        <div class="flex w-full flex-row items-start justify-start gap-3 pb-4">
+          <div
+            class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center bg-no-repeat"
+            data-alt="Profile picture of Elena Rodriguez"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASHU0afp5IWUS4EYcP-VbjnDmEmpg60yeUopURyJBTiaqatvwP5_ARvgtlWb-AD2US6rUMOWp0Uye26RYJm4zjhwfgxtKVk67G6zVQz3ALdfcep9nGu9bUOH0WpRUihBKmmDI7TFwM4Mf6UXBw0keNlFBMv_Yy7i31PWMAfw2Pnu9IPG_OHYbfDoIP2W8TWx6ZTs-edRDqNrP_smzOimlUCcY-EJs5ZjtUkTFK9K3oe399SjUh12O3C5el6R32ZUA8zpGsQqoyHtME');
+            "
+          ></div>
+          <div class="flex h-full flex-1 flex-col items-start justify-start">
+            <div
+              class="flex w-full flex-row items-baseline justify-start gap-x-2"
+            >
+              <p class="text-sm font-bold leading-normal text-[#343A40]">
+                Elena Rodriguez
+              </p>
+              <p class="text-xs font-normal leading-normal text-[#6C757D]">
+                2 hours ago
+              </p>
+            </div>
+            <p class="text-sm font-normal leading-normal text-[#343A40]">
+              I've noticed this pothole on my way to work as well. It's getting
+              bigger and could be dangerous for cyclists.
+            </p>
+          </div>
+        </div>
+        <!-- Comment 2 -->
+        <div class="flex w-full flex-row items-start justify-start gap-3 py-4">
+          <div
+            class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center bg-no-repeat"
+            data-alt="Profile picture of Ben Carter"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwq7JJ8YswIhATJ4GXrddBGszfYGZ0v7LpV9vZG5_Ol1VPG8qDBQ8Ty0onjDWp0201iJuWbD_B77w1AQJ8LUgmG_KPeyuemnnHZXaeIQfK92ViDnwVYZNFV2ltb4yFbPnkCjKlgC3LpAWM0Sue1OLALybxdIvf92MqHmBOVStprOpaMDK5HUjjFWwl7Ae33Lp7WoXRKz8_MyQGgZO-hbxvQ1AsJ3E0YuZYWmV86LksDExiAdBQ0EgU5xHjtQGWBZG0Cp7aqN7Jdb-Z');
+            "
+          ></div>
+          <div class="flex h-full flex-1 flex-col items-start justify-start">
+            <div
+              class="flex w-full flex-row items-baseline justify-start gap-x-2"
+            >
+              <p class="text-sm font-bold leading-normal text-[#343A40]">
+                Ben Carter
+              </p>
+              <p class="text-xs font-normal leading-normal text-[#6C757D]">
+                1 hour ago
+              </p>
+            </div>
+            <p class="text-sm font-normal leading-normal text-[#343A40]">
+              Thanks for reporting this! I almost tripped there yesterday. Hope
+              the city fixes it soon.
+            </p>
+          </div>
+        </div>
+        <!-- Comment 3 -->
+        <div class="flex w-full flex-row items-start justify-start gap-3 py-4">
+          <div
+            class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center bg-no-repeat"
+            data-alt="Profile picture of Olivia Chen"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJAc1EcliP4Ymkkndjj2gGzCS53GQF71EXtnVD55Ea0dxk5lB510qroHmYoqNvGj3lVnUh5u-_m0AN280llvPwWat3gH3rwl8N2nDVNAP681XuPrx1m4MFPmC4sp4S1IkQs_tu-kKnCIIt7n7L43NYZD5wEuTdt11rAwWl924PH8AdL52ry5aK7r9Swz0a4RMEJPS7dmMbfO7gHzw-geZGZtJ-08MHjUnHedGl4DaCcOLdzSUGf3IKMk2lCTNH2tMzmZOMa7Oc92rK');
+            "
+          ></div>
+          <div class="flex h-full flex-1 flex-col items-start justify-start">
+            <div
+              class="flex w-full flex-row items-baseline justify-start gap-x-2"
+            >
+              <p class="text-sm font-bold leading-normal text-[#343A40]">
+                Olivia Chen
+              </p>
+              <p class="text-xs font-normal leading-normal text-[#6C757D]">
+                45 minutes ago
+              </p>
+            </div>
+            <p class="text-sm font-normal leading-normal text-[#343A40]">
+              Has anyone tried calling the public works department directly?
+              Sometimes that speeds up the process.
+            </p>
+          </div>
+        </div>
+      </main>
+      <!-- Comment Input -->
+      <div
+        class="sticky bottom-0 shrink-0  bg-background-light pb-5 pt-3"
+      >
+        <div class="flex items-center gap-3 px-4">
+          <div
+            class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center bg-no-repeat"
+            data-alt="Current user's profile picture"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9MQKDGfOOG6gQiss4nii_1vyie45o2-lBX4gP_SdaCPbwQFveqkF1HBvqq3AEc_CKxq0HC8dx9Iu9odX4Lq61GVemlFhiLb49UVyfWvc_xjjSc1jwXsuejhUzrNQeKACYjSk4TVdmOZMnYaCuUEIbWiXICTb2ROq8_8e8Iwxw-or-v6m8wJpBqJBjqcQgBQshd5RQZnZ8EfNYb4NH5bfJ10G8gcsw282vHI_31aHgY0YSmFAJQ21iCYcza1_8_2R34k6GZbjNy0E0');
+            "
+          ></div>
+          <label class="flex h-12 flex-1 flex-col">
+            <div class="flex h-full w-full flex-1 items-stretch rounded-full">
+              <input
+                class="form-input h-full min-w-0 flex-1 resize-none overflow-hidden rounded-full rounded-r-none border border-r-0 border-gray-300 bg-[#F8F9FA] px-4 pr-2 text-base font-normal leading-normal text-[#343A40] placeholder:text-[#6C757D] focus:border-gray-300 focus:outline-0 focus:ring-0"
+                placeholder="Add a comment..."
+                value=""
+              />
+              <div
+                class="flex items-center justify-center rounded-r-full border border-l-0 border-gray-300 bg-[#F8F9FA] pr-2"
+              >
+                <button
+                  class="flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[#007BFF] text-white"
+                >
+                  <span class="material-symbols-outlined text-xl">send</span>
+                </button>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+      <!-- Bottom Navigation Bar -->
+      <div
+        class="flex shrink-0 gap-2 border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark px-4 pb-3 pt-2"
+      >
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-primary"
+          href="#"
+        >
+          <span
+            class="material-symbols-outlined !font-['Material_Symbols_Outlined'] fill-1 !text-2xl"
+            >home</span
+          >
+          <p class="text-xs font-medium leading-normal">Home</p>
+        </a>
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
+          href="report.html"
+        >
+          <span class="material-symbols-outlined !text-2xl">add_circle</span>
+          <p class="text-xs font-normal leading-normal">Add Report</p>
+        </a>
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
+          href="profile.html"
+        >
+          <span class="material-symbols-outlined !text-2xl">person</span>
+          <p class="text-xs font-normal leading-normal">Profile</p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

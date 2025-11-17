@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CityVoice - Profile</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8FC285",
+              secondary: "#FFA500",
+              tertiary: "#28A745",
+              "background-light": "#F5F5F5",
+              "background-dark": "#101922",
+              "text-primary": "#333333",
+              "text-primary-dark": "#F0F0F0",
+              "text-secondary": "#F0F0F0",
+              "text-secondary-dark": "#CCCCCC",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-[#F8F9FA] dark:bg-slate-900">
+    <div
+      class="relative flex h-screen w-full max-w-[390px] flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden max-w-[390px] mx-auto"
+    >
+      <div
+        class="flex shrink-0 items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="material-symbols-outlined text-primary text-3xl"
+            onclick="history.back()"
+            >keyboard_arrow_left</span
+          >
+          <h1
+            class="text-text-primary dark:text-text-primary-dark text-xl font-bold leading-tight tracking-tighter"
+          >
+            CityVoice
+          </h1>
+        </div>
+        <div class="flex items-center gap-2">
+          <a
+            href="notifications.html"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-text-primary dark:text-text-primary-dark"
+          >
+            <span class="material-symbols-outlined text-2xl"
+              >notifications</span
+            >
+          </a>
+          <a
+            href="settings.html"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-text-primary dark:text-text-primary-dark"
+          >
+            <span class="material-symbols-outlined text-2xl">settings</span>
+          </a>
+        </div>
+      </div>
+      <main class="flex-1 overflow-y-auto px-6">
+        <div class="flex flex-col items-center py-4">
+          <div
+            class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 border-2 border-primary mb-8"
+            data-alt="User profile picture of Jane Doe"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDND6uTDYFS5aozKsd-4sDbW0UXVbQ85LZSHLmr0wT0fZHz9vRdJyordd4hgpCDQoX65BPxgcyi2bgfuJi48IiRVUmeyLoTPABRHMKSS9-T-xgiI8xnsM3CEB9LV53s-zKN-iGm_BLqKLf9O086gfO1o0dDZH2OF_HxpliNpD9Ni3eqZf8zhYQUy5Btiuy6B2eV0PRTPukEMfQ3e6KIA7WKcGD-ycwPd8pnq3js5tIZJMnhjFhdJNzzwULLmk3J8Qp9dW9jPzrutNTk');
+            "
+          ></div>
+          <form class="w-full max-w-sm space-y-6">
+            <div>
+              <label
+                class="text-[#343A40] text-sm font-medium leading-normal block mb-2"
+                for="email"
+                >E-mail</label
+              >
+              <input
+                class="w-full rounded-lg border border-[#DEE2E6] bg-[#FFFFFF] p-3 text-[#495057] placeholder:text-[#ADB5BD] focus:border-[#3E92CC] focus:ring-[#3E92CC]"
+                id="email"
+                placeholder="jane.doe@example.com"
+                type="email"
+              />
+            </div>
+            <div>
+              <label
+                class="text-[#343A40] text-sm font-medium leading-normal block mb-2"
+                for="username"
+                >Username</label
+              >
+              <input
+                class="w-full rounded-lg border border-[#DEE2E6] bg-[#FFFFFF] p-3 text-[#495057] placeholder:text-[#ADB5BD] focus:border-[#3E92CC] focus:ring-[#3E92CC]"
+                id="username"
+                placeholder="janedoe"
+                type="text"
+              />
+            </div>
+            <div>
+              <label
+                class="text-[#343A40] text-sm font-medium leading-normal block mb-2"
+                for="password"
+                >Password</label
+              >
+              <input
+                class="w-full rounded-lg border border-[#DEE2E6] bg-[#FFFFFF] p-3 text-[#495057] placeholder:text-[#ADB5BD] focus:border-[#3E92CC] focus:ring-[#3E92CC]"
+                id="password"
+                placeholder="••••••••"
+                type="password"
+              />
+            </div>
+            <div class="pt-4">
+              <a href="profile.html"
+                class="flex min-w-[84px] w-full max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-[#FFFFFF] text-sm font-medium leading-normal tracking-[0.015em]"
+                type="submit"
+              >
+                <span class="truncate">Update</span>
+            </a>
+            </div>
+          </form>
+        </div>
+      </main>
+      <div
+        class="flex shrink-0 gap-2 border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark px-4 pb-3 pt-2"
+      >
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-primary"
+          href="home.html"
+        >
+          <span
+            class="material-symbols-outlined !font-['Material_Symbols_Outlined'] fill-1 !text-2xl"
+            >home</span
+          >
+          <p class="text-xs font-medium leading-normal">Home</p>
+        </a>
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
+          href="report.html"
+        >
+          <span class="material-symbols-outlined !text-2xl">add_circle</span>
+          <p class="text-xs font-normal leading-normal">Add Report</p>
+        </a>
+        <a
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
+          href="profile.html"
+        >
+          <span class="material-symbols-outlined !text-2xl">person</span>
+          <p class="text-xs font-normal leading-normal">Profile</p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
