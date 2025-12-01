@@ -166,10 +166,13 @@
               class="flex w-full items-center justify-center gap-3 rounded-lg border-2 border-dashed border-border-light bg-white py-8 text-center text-text-dark transition-colors hover:bg-gray-50"
               type="button"
             >
-              <span class="material-symbols-outlined text-3xl text-gray-500 text-primary"
+              <span
+                class="material-symbols-outlined text-3xl text-gray-500 text-primary"
                 >add_photo_alternate</span
               >
-              <span class="font-semibold text-primary">Upload Photos from Gallery</span>
+              <span class="font-semibold text-primary"
+                >Upload Photos from Gallery</span
+              >
             </button>
           </div>
           <!-- Location -->
@@ -208,23 +211,29 @@
       <div
         class="flex shrink-0 gap-2 border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark px-4 pb-3 pt-2"
       >
+        <!-- HOME (NOT ACTIVE) -->
         <a
-          class="flex flex-1 flex-col items-center justify-end gap-1 text-primary"
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
           href="home.html"
         >
           <span
             class="material-symbols-outlined !font-['Material_Symbols_Outlined'] fill-1 !text-2xl"
-            >home</span
           >
+            home
+          </span>
           <p class="text-xs font-medium leading-normal">Home</p>
         </a>
+
+        <!-- ADD REPORT (ACTIVE FOR THIS PAGE) -->
         <a
-          class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-primary"
           href="report.html"
         >
           <span class="material-symbols-outlined !text-2xl">add_circle</span>
           <p class="text-xs font-normal leading-normal">Add Report</p>
         </a>
+
+        <!-- PROFILE (NOT ACTIVE) -->
         <a
           class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
           href="profile.html"

@@ -74,17 +74,20 @@
           </h1>
         </div>
         <div class="flex items-center gap-2">
+          <!-- Notifications (inactive) -->
           <a
             href="notifications.html"
-            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-text-primary dark:text-text-primary-dark"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-text-primary/70 dark:text-text-primary-dark/70"
           >
             <span class="material-symbols-outlined text-2xl"
               >notifications</span
             >
           </a>
+
+          <!-- Settings (active) -->
           <a
-            href="settings.html"
-            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-text-primary dark:text-text-primary-dark"
+            href="#"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-primary"
           >
             <span class="material-symbols-outlined text-2xl">settings</span>
           </a>
@@ -93,7 +96,7 @@
       <main class="flex-1 overflow-y-auto px-6 pb-24 bg-background-light">
         <div class="flex flex-col py-6">
           <div class="mb-8 flex items-center gap-4">
-            <div class="h-16 w-16 shrink-0 rounded-full ">
+            <div class="h-16 w-16 shrink-0 rounded-full">
               <img
                 alt="User profile image"
                 class="h-full w-full rounded-full object-cover"
@@ -177,15 +180,16 @@
         class="flex shrink-0 gap-2 border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark px-4 pb-3 pt-2"
       >
         <a
-          class="flex flex-1 flex-col items-center justify-end gap-1 text-primary"
+          class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
           href="home.html"
         >
           <span
             class="material-symbols-outlined !font-['Material_Symbols_Outlined'] fill-1 !text-2xl"
             >home</span
           >
-          <p class="text-xs font-medium leading-normal">Home</p>
+          <p class="text-xs font-normal leading-normal">Home</p>
         </a>
+
         <a
           class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
           href="report.html"
@@ -193,6 +197,7 @@
           <span class="material-symbols-outlined !text-2xl">add_circle</span>
           <p class="text-xs font-normal leading-normal">Add Report</p>
         </a>
+
         <a
           class="flex flex-1 flex-col items-center justify-end gap-1 text-text-primary/70 dark:text-text-primary-dark/70"
           href="profile.html"
